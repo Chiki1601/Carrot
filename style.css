@@ -1,0 +1,107 @@
+body {
+  background: #eee;
+  overflow: hidden;
+  font-family: "Quicksand";
+}
+
+.header {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.header h1, .header h2 {
+  margin: 0;
+}
+.header h1 {
+  color: #757780;
+}
+.header .number {
+  color: #ff7f00;
+}
+.header .type {
+  color: #a1af37;
+}
+.header .social a img {
+  margin-top: 10px;
+  height: 1.5em;
+}
+
+#content {
+  position: absolute;
+  left: 40%;
+  top: 100px;
+  -webkit-animation: jump alternate 1s infinite;
+          animation: jump alternate 1s infinite;
+}
+
+#content h1 {
+  margin: 0;
+}
+
+#leftArm {
+  transform-origin: left;
+  -webkit-animation: armsUp alternate 1s infinite;
+          animation: armsUp alternate 1s infinite;
+}
+
+#rightArm {
+  transform-origin: right;
+  -webkit-animation: armsUp alternate 1s infinite;
+          animation: armsUp alternate 1s infinite;
+}
+
+#leftFoot, #rightFoot {
+  transform-origin: center;
+  -webkit-animation: footUp alternate 1s infinite;
+          animation: footUp alternate 1s infinite;
+}
+
+@-webkit-keyframes armsUp {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-17deg);
+  }
+}
+
+@keyframes armsUp {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-17deg);
+  }
+}
+@-webkit-keyframes footUp {
+  0% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes footUp {
+  0% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes jump {
+  0% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: rotate(15px);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: rotate(15px);
+  }
+}
